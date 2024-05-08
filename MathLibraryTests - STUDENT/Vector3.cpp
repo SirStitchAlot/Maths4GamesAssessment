@@ -41,8 +41,8 @@ namespace MathClasses {
 	{
 		return data;
 	}
-
-	Vector3::operator const float* ()const  
+	// cast to float array - const-qualified
+	Vector3:: operator const float* ()const
 	{
 		return data;
 	}

@@ -5,6 +5,9 @@ namespace MathClasses
     struct Vector3
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
+        //Implement maths operators
+        //implement Floating Imprecision and quality tests
+        //implement ToString
      /*==============================^^todo^^====================================================*/
     public:
 
@@ -45,7 +48,7 @@ namespace MathClasses
         operator float* (); 
 
         // cast to float array - const-qualified
-        operator const float* (); 
+        operator const float* ()const; 
 
 
 
