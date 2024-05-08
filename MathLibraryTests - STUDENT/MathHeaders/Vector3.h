@@ -6,13 +6,15 @@ namespace MathClasses
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
      /*==============================^^todo^^====================================================*/
-    private:
+    public:
 
-        float x;
-
-        float y;
-
-        float z;
+        // this union is a total of 12-bytes
+       // the struct and float inside the union share the same memory
+        union
+        {
+            struct { float x, y, z; };  // 12-bytes
+            float data[3];              // 12-bytes
+        };
 
 
 
@@ -25,7 +27,7 @@ namespace MathClasses
         ~Vector3();
 
     /*===================================^^^Structors^^^========================================================*/
-
+    public:
 
 
 
@@ -35,16 +37,22 @@ namespace MathClasses
 
 
     /*=======================================^^Methods^^===========================================================*/
+    public:
 
-    
+        const float& operator [](int dim) const;
+       
+        // cast to float array
+        operator float* (); 
+
+        // cast to float array - const-qualified
+        operator const float* (); 
 
 
 
 
 
 
-
-
+    /*=======================================^^^overloads/casting^^^======================================================================*/
 
 	};
 }
