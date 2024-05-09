@@ -78,8 +78,8 @@ namespace MathClasses {
 
 	}
 
-	//multiply operator*
-	Vector3 operator * (const Vector3& rhs) const {
+	//multiply operator* //this part done below is done wrong so completely ignore it idk why im not deleteing it but thats what im doing
+	Vector3 Vector3::operator * (const Vector3& rhs) const {
 	
 		Vector3 sum;
 
@@ -90,9 +90,6 @@ namespace MathClasses {
 		sum.z = z * rhs.z;
 
 		return sum;
-
-	
-	
 	}
 
 
