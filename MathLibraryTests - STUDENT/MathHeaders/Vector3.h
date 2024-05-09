@@ -41,7 +41,7 @@ namespace MathClasses
 
     /*=======================================^^Methods^^===========================================================*/
     public:
-
+        //subscript Operator that allows us to sort through data
         const float& operator [](int dim) const;
        
         // cast to float array
@@ -50,7 +50,11 @@ namespace MathClasses
         // cast to float array - const-qualified
         operator const float* ()const; 
 
+        Vector3 operator + (const Vector3& rhs) const;
 
+        Vector3 operator - (const Vector3& rhs) const;
+
+        Vector3 operator * (const Vector3& rhs) const;
 
 
 

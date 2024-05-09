@@ -30,7 +30,7 @@ namespace MathClasses {
 
 
 
-
+	//subscript Operator that allows us to sort through data
 	const float& Vector3::operator [](int dim) const
 	{
 		return data[dim];
@@ -41,10 +41,58 @@ namespace MathClasses {
 	{
 		return data;
 	}
+
 	// cast to float array - const-qualified
 	Vector3:: operator const float* ()const
 	{
 		return data;
+	}
+	
+	//addition opperator+
+	Vector3 Vector3::operator+ (const Vector3& rhs) const {
+	
+		Vector3 sum;
+
+		// x is the LEFT vector's x-component
+		// rhs.x is the RIGHT vector's x-component
+		sum.x = x + rhs.x;
+		sum.y = y + rhs.y;
+		sum.z = z + rhs.z;
+
+		return sum;
+
+	}
+
+	//subtraction operator -
+	Vector3 Vector3::operator- (const Vector3& rhs) const {
+
+		Vector3 sum;
+
+		// x is the LEFT vector's x-component
+		// rhs.x is the RIGHT vector's x-component
+		sum.x = x - rhs.x;
+		sum.y = y - rhs.y;
+		sum.z = z - rhs.z;
+
+		return sum;
+
+	}
+
+	//multiply operator*
+	Vector3 operator * (const Vector3& rhs) const {
+	
+		Vector3 sum;
+
+		// x is the LEFT vector's x-component
+		// rhs.x is the RIGHT vector's x-component
+		sum.x = x * rhs.x;
+		sum.y = y * rhs.y;
+		sum.z = z * rhs.z;
+
+		return sum;
+
+	
+	
 	}
 
 
