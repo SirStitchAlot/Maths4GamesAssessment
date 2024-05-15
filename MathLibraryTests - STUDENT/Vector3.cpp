@@ -4,7 +4,7 @@
 namespace MathClasses {
 
 
-
+	//fix F*V operator overload (got something to do with friend function)
 /*==============================^^todo^^====================================================*/
 	Vector3::Vector3() {
 
@@ -94,8 +94,6 @@ namespace MathClasses {
 	Vector3 Vector3::operator * (const float scaler) const {
 	
 		Vector3 sum;
-
-		// x is the LEFT vector's x-component
 		
 		sum.x = x * scaler;
 		sum.y = y * scaler;
@@ -107,8 +105,6 @@ namespace MathClasses {
 	Vector3 Vector3::operator * (const float scaler) const {
 
 		Vector3 sum;
-
-		// x is the LEFT vector's x-component
 
 		sum.x = scaler * x  ;
 		sum.y = scaler * y  ;
