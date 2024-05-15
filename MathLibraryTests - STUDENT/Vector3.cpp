@@ -78,20 +78,36 @@ namespace MathClasses {
 
 	}
 
-	//multiply operator* //this part done below is done wrong so completely ignore it idk why im not deleteing it but thats what im doing
-	Vector3 Vector3::operator * (const Vector3& rhs) const {
+	//multiply operator* 
+	Vector3 Vector3::operator * (const float scaler) const {
 	
 		Vector3 sum;
 
 		// x is the LEFT vector's x-component
-		// rhs.x is the RIGHT vector's x-component
-		sum.x = x * rhs.x;
-		sum.y = y * rhs.y;
-		sum.z = z * rhs.z;
+		
+		sum.x = x * scaler;
+		sum.y = y * scaler;
+		sum.z = z * scaler;
 
 		return sum;
 	}
 
+	//I dont know how to impliment operator * (Vector, float) / operator * (float, Vector)
+
+	Vector3 Vector3::operator * (const float scaler) const {
+
+		Vector3 sum;
+
+		// x is the LEFT vector's x-component
+
+		sum.x = scaler * x  ;
+		sum.y = scaler * y  ;
+		sum.z = scaler * z  ;
+
+		return sum;
+	}
+
+	Vector3 Vector3::operator / () const {}
 
 /*=====================================^^^overloads^^^================================================*/
 }

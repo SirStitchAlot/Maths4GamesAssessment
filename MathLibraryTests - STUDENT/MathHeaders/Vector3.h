@@ -54,12 +54,14 @@ namespace MathClasses
 
         Vector3 operator - (const Vector3& rhs) const;
         //this part done below is done wrong so completely ignore it idk why im not deleteing it but thats what im doing
-        Vector3 operator * (const Vector3& rhs) const;
+        Vector3 operator * (const float scaler) const;
+
+        Vector3 operator / (const float scaler) const;
 
 
 
 
     /*=======================================^^^overloads/casting^^^======================================================================*/
-
+        
 	};
 }
