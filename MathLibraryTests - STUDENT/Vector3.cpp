@@ -17,14 +17,9 @@ namespace MathClasses {
 	};
 
 	Vector3::Vector3(float X, float Y, float Z) {
-
 		x = X;
 		y = Y;
 		z = Z;
-
-
-
-
 	}
 
 
@@ -100,18 +95,22 @@ namespace MathClasses {
 		sum.z = z * scaler;
 
 		return sum;
+
+		 
 	}
 
 	Vector3 Vector3::operator * (const float scaler) const {
 
 		Vector3 sum;
 
-		sum.x = scaler * x  ;
-		sum.y = scaler * y  ;
-		sum.z = scaler * z  ;
+		sum.x = scaler * x;
+		sum.y = scaler * y;
+		sum.z = scaler * z;
 
 		return sum;
+
 	}
+	 
 
 	Vector3 Vector3::operator / (const float scaler) const {
 	

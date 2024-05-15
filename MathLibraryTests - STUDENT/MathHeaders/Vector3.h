@@ -6,7 +6,6 @@ namespace MathClasses
 {
     struct Vector3
     {
-        //fix F*V operator overload (got something to do with friend function)
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
      /*==============================^^todo^^====================================================*/
     public:
