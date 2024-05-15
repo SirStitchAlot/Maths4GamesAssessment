@@ -8,13 +8,24 @@ namespace MathClasses {
 /*==============================^^todo^^====================================================*/
 	Vector3::Vector3() {
 
-		 x = 0;
+		 x = 0.f;
 
-		 y = 0;
+		 y = 0.f;
 
-		 z = 0;
+		 z = 0.f;
 
 	};
+
+	Vector3::Vector3(float X, float Y, float Z) {
+
+		x = X;
+		y = Y;
+		z = Z;
+
+
+
+
+	}
 
 
 	Vector3::~Vector3() {};
@@ -22,7 +33,11 @@ namespace MathClasses {
 
 /*===================================^^^Structors^^^========================================================*/
 
-
+	std::string Vector3::ToString() const{
+	
+		return std::to_string(x) + ", " + std::to_string(y) + ", " + std::to_string(z);
+	
+	}
 
 
 
@@ -48,7 +63,6 @@ namespace MathClasses {
 		return data;
 	}
 	
-	//addition opperator+
 	Vector3 Vector3::operator+ (const Vector3& rhs) const {
 	
 		Vector3 sum;
@@ -63,7 +77,6 @@ namespace MathClasses {
 
 	}
 
-	//subtraction operator -
 	Vector3 Vector3::operator- (const Vector3& rhs) const {
 
 		Vector3 sum;
@@ -78,7 +91,6 @@ namespace MathClasses {
 
 	}
 
-	//multiply operator* 
 	Vector3 Vector3::operator * (const float scaler) const {
 	
 		Vector3 sum;
@@ -91,8 +103,6 @@ namespace MathClasses {
 
 		return sum;
 	}
-
-	//I dont know how to impliment operator * (Vector, float) / operator * (float, Vector)
 
 	Vector3 Vector3::operator * (const float scaler) const {
 
@@ -107,7 +117,68 @@ namespace MathClasses {
 		return sum;
 	}
 
-	Vector3 Vector3::operator / () const {}
+	Vector3 Vector3::operator / (const float scaler) const {
+	
+		Vector3 sum;
+
+		sum.x = x / scaler;
+		sum.y = y / scaler;
+		sum.z = z / scaler;
+
+		return sum;
+	}
+
+	void Vector3::operator += (const Vector3& rhs) {
+
+		x += rhs.x;
+		y += rhs.y;
+		z += rhs.z;
+
+
+	}
+
+	void Vector3::operator -= (const Vector3& rhs){
+	
+		x -= rhs.x;
+		y -= rhs.y;
+		z -= rhs.z;
+
+	}
+
+	void Vector3::operator *= (const float scaler){
+	
+		x *= scaler;
+		y *= scaler;
+		z *= scaler;
+	
+	}
+
+	void Vector3::operator /= (const float scaler){
+	
+		x /= scaler; 
+		y /= scaler; 
+		z /= scaler;
+
+	}
+
+	bool Vector3::operator == (const Vector3 &rhs){
+	
+		float xDist = fabsf(x - rhs.x);
+		float yDist = fabsf(y - rhs.y);
+		float zDist = fabsf(z - rhs.z);
+	
+		const float THRESHOLD = 0.00001f;
+	
+		return xDist < THRESHOLD && yDist < THRESHOLD && zDist < THRESHOLD;
+
+	}
+
+	bool Vector3::operator != (const Vector3 &rhs){
+	
+		return !(*this == rhs);
+	
+	}
+
 
 /*=====================================^^^overloads^^^================================================*/
 }

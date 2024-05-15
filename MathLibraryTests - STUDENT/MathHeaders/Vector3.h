@@ -1,13 +1,12 @@
 #pragma once
+#include <cmath>
+#include <string>
 
 namespace MathClasses
 {
     struct Vector3
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
-        //Implement maths operators
-        //implement Floating Imprecision and quality tests
-        //implement ToString
      /*==============================^^todo^^====================================================*/
     public:
 
@@ -27,11 +26,14 @@ namespace MathClasses
 
         Vector3();
 
+        Vector3(float X, float Y,float Z);
+
         ~Vector3();
 
     /*===================================^^^Structors^^^========================================================*/
     public:
 
+        std::string ToString() const;
 
 
 
@@ -53,11 +55,24 @@ namespace MathClasses
         Vector3 operator + (const Vector3& rhs) const;
 
         Vector3 operator - (const Vector3& rhs) const;
-        //this part done below is done wrong so completely ignore it idk why im not deleteing it but thats what im doing
+       
+        Vector3 operator * (const float scaler) const;
+
         Vector3 operator * (const float scaler) const;
 
         Vector3 operator / (const float scaler) const;
 
+        void operator += (const Vector3& rhs);
+        
+        void operator -= (const Vector3& rhs);
+        
+        void operator *= (const float scaler);
+        
+        void operator /= (const float scaler);
+
+        bool operator == (const Vector3 &rhs);
+
+        bool operator != (const Vector3 &rhs);
 
 
 
