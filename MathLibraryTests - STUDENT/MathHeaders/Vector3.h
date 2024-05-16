@@ -32,11 +32,23 @@ namespace MathClasses
 
     /*===================================^^^Structors^^^========================================================*/
     public:
-
+        //just prints the vectors to console
         std::string ToString() const;
 
+        //finds the magnitude of a vector
+        float Magnitude() const;
 
+        //sqaures all the Vectors variables
+        float MagnitudeSqr() const;
 
+        //calculates the difference between two vectors
+        float Distance(const Vector3& other) const;
+
+        //This Normalises the vector
+        void Normalise();
+
+        //returns a copy of the normialised vector
+        Vector3 Normalised() const;
 
 
 
@@ -56,11 +68,11 @@ namespace MathClasses
 
         Vector3 operator - (const Vector3& rhs) const;
        
-        Vector3 operator * (const float scaler) const;
+        Vector3 operator * (const float& scaler) const;
 
-        Vector3 operator * (const float scaler) const;
+        Vector3 operator * (const float& scaler)const;
 
-        Vector3 operator / (const float scaler) const;
+        Vector3 operator / (const float& scaler) const;
 
         void operator += (const Vector3& rhs);
         

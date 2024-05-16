@@ -34,7 +34,42 @@ namespace MathClasses {
 	
 	}
 
+	float Vector3::Magnitude()const{
+		
+		return sqrtf(x * x + y * y + z * z);
 
+	}
+
+	float Vector3::MagnitudeSqr() const{
+
+		return x * x + y * y + z * z;
+
+	}
+
+	float Vector3::Distance(const Vector3& other) const{
+	
+		return (*this - other).Magnitude();
+	
+	}
+
+	void Vector3::Normalise(){
+	
+		float m = Magnitude();
+
+		x /= m;
+		y /= m;
+		z /= m;
+	
+	}
+
+	Vector3 Vector3::Normalised() const{
+	
+		Vector3 copy = *this;
+		copy.Normalise();
+
+		return copy;
+	
+	}
 
 /*=======================================^^Methods^^===========================================================*/
 
@@ -86,7 +121,7 @@ namespace MathClasses {
 
 	}
 
-	Vector3 Vector3::operator * (const float scaler) const {
+	Vector3 Vector3::operator * (const float& scaler) const {
 	
 		Vector3 sum;
 		
@@ -99,7 +134,7 @@ namespace MathClasses {
 		 
 	}
 
-	Vector3 Vector3::operator * (const float scaler) const {
+	 Vector3 Vector3::operator * (const float& scaler)const {
 
 		Vector3 sum;
 
@@ -112,7 +147,7 @@ namespace MathClasses {
 	}
 	 
 
-	Vector3 Vector3::operator / (const float scaler) const {
+	Vector3 Vector3::operator / (const float& scaler) const {
 	
 		Vector3 sum;
 
