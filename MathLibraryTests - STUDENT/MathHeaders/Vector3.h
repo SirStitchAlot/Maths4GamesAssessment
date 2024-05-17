@@ -50,6 +50,9 @@ namespace MathClasses
         //returns a copy of the normialised vector
         Vector3 Normalised() const;
 
+        //idk
+        float Dot(const Vector3& other);
+    
 
 
 

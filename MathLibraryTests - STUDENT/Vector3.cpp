@@ -71,6 +71,11 @@ namespace MathClasses {
 	
 	}
 
+	float Vector3::Dot(const Vector3& other)
+	{
+		return x * other.x + y * other.y + z * other.z;
+	}
+
 /*=======================================^^Methods^^===========================================================*/
 
 
