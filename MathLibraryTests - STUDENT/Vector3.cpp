@@ -76,6 +76,25 @@ namespace MathClasses {
 		return x * other.x + y * other.y + z * other.z;
 	}
 
+	Vector3 Vector3::Cross(const Vector3& other)
+	{
+		return Vector3(y * other.z - z * other.y,
+			z * other.x - x * other.z,
+			x * other.y - y * other.x);
+	}
+
+	float Vector3::AngleBetween(const Vector3& other) const {
+		// normalise the vectors
+		Vector3 a = Normalised();
+		Vector3 b = other.Normalised();
+
+		// calculate the dot product
+		float d = a.Dot(other);
+
+		// return the angle between them
+		return acosf(d);
+	}
+
 /*=======================================^^Methods^^===========================================================*/
 
 
@@ -139,7 +158,7 @@ namespace MathClasses {
 		 
 	}
 
-	 Vector3 Vector3::operator * (const float& scaler)const {
+     Vector3 Vector3::operator * (const float& scaler)const{
 
 		Vector3 sum;
 
@@ -147,9 +166,10 @@ namespace MathClasses {
 		sum.y = scaler * y;
 		sum.z = scaler * z;
 
+
 		return sum;
 
-	}
+	 }
 	 
 
 	Vector3 Vector3::operator / (const float& scaler) const {

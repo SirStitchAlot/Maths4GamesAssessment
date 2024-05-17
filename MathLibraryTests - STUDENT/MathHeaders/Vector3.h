@@ -52,6 +52,13 @@ namespace MathClasses
 
         //idk
         float Dot(const Vector3& other);
+
+        //idk
+        Vector3 Cross(const Vector3& other);
+
+        //returns the angle between two vectors
+        float AngleBetween(const Vector3& other) const;
+    
     
 
 
@@ -73,7 +80,7 @@ namespace MathClasses
        
         Vector3 operator * (const float& scaler) const;
 
-        Vector3 operator * (const float& scaler)const;
+       Vector3 operator * (const float& scaler)const;
 
         Vector3 operator / (const float& scaler) const;
 
