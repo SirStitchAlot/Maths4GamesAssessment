@@ -16,9 +16,6 @@
     <Filter Include="MathHeaders">
       <UniqueIdentifier>{b7bd06a1-f403-4600-b58a-226006e7b36b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Definitions">
-      <UniqueIdentifier>{58402918-fd2c-45e1-bf34-9ead722565d1}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ColourTests.cpp">
@@ -41,21 +38,6 @@
     </ClCompile>
     <ClCompile Include="Vector4Tests.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Colour.cpp">
-      <Filter>Definitions</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix3.cpp">
-      <Filter>Definitions</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix4.cpp">
-      <Filter>Definitions</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector3.cpp">
-      <Filter>Definitions</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector4.cpp">
-      <Filter>Definitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
