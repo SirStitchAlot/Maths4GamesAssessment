@@ -1,15 +1,15 @@
 #pragma once
 #include "Vector3.h"
 #include <string>
+#include <cmath>
 namespace MathClasses
 {
     struct Matrix3
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
-        // figure out why static wont work in the cpp file for make identity() and why the object inside doesn't want to be made
         //add all my math operators M*M, M*V, M==M, M!=M and obv the compounds
         //need matrix3(flaot[9])constructor
-        //no suitable conversion from matrix3 to float*
+        
         
         
         
@@ -139,6 +139,15 @@ namespace MathClasses
 
          }
 
+         Matrix3& operator *=(Matrix3 rhs)
+         {
+             m1 *= rhs.m1, rhs.m4, rhs.m7;
+
+             m1 *= rhs.m1 + rhs.m4 + rhs.m7;
+
+             m1 *= (rhs.m1 + rhs.m4 + rhs.m7);
+         }
+
          Vector3 operator *(Vector3 rhs) const
          {
              return Vector3(
@@ -147,6 +156,18 @@ namespace MathClasses
                  Vector3(m3, m6, m9).Dot(rhs)
              );
          }
+
+         bool operator == (const Matrix3& rhs) const
+         {
+             // TODO - remember about floating point imprecision!  //could probably copy the code from vector 3 (kinda remember its slightly different)
+            
+         }
+
+         bool operator != (const Matrix3& rhs) const
+         {
+             return !(*this == rhs);
+         }
+
 
     
     

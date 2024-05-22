@@ -6,5 +6,6 @@ namespace MathClasses
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
         // ...
+        //basically copy stuff from vector3 to this 
 	};
 }

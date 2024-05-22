@@ -6,8 +6,7 @@ namespace MathClasses
 {
     struct Vector3
     {
-        // Add the struct data fields and methods, as per the tutorials and exercises, here...
-		//something weird with subscipt is happening ???      
+        // Add the struct data fields and methods, as per the tutorials and exercises, here... 
      /*==============================^^todo^^====================================================*/
     public:
 
