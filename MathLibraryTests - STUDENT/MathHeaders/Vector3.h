@@ -126,7 +126,10 @@ namespace MathClasses
     /*=======================================^^Methods^^===========================================================*/
     public:
 
-
+		float& operator [](int dim)
+		{
+			return data[dim];
+		}
 
 		//subscript Operator that allows us to sort through data
 		const float& operator [](int dim) const

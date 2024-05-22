@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector3.h"
+#include <string>
 namespace MathClasses
 {
     struct Matrix3
@@ -7,7 +8,8 @@ namespace MathClasses
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
         // figure out why static wont work in the cpp file for make identity() and why the object inside doesn't want to be made
         //add all my math operators M*M, M*V, M==M, M!=M and obv the compounds
-        
+        //need matrix3(flaot[9])constructor
+        //no suitable conversion from matrix3 to float*
         
         
         
@@ -86,6 +88,21 @@ namespace MathClasses
 
 
 
+         }
+
+         Matrix3 Transposed() const
+         {
+             return Matrix3(m1, m4, m7, m2, m5, m8, m3, m6, m9);
+         }
+
+         std::string ToString() const
+         {
+             std::string str = std::to_string(v[0]);
+             for (size_t i = 1; i < 9; ++i)
+             {
+                 str += ", " + std::to_string(v[i]);
+             }
+             return str;
          }
 
 
