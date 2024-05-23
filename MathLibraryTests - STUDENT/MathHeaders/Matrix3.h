@@ -7,7 +7,6 @@ namespace MathClasses
     struct Matrix3
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
-        //add all my math operators M*M, M*V, M==M, M!=M and obv the compounds
         //need matrix3(flaot[9])constructor
         
         
@@ -55,17 +54,10 @@ namespace MathClasses
         
         }
 
+
+
         ~Matrix3() {};
-       
-
-
-
-
-    
-
-
-
-
+     
 
     /*=========================================^^Structors^^============================================================================================*/
 
@@ -106,10 +98,6 @@ namespace MathClasses
          }
 
 
-
-
-
-
     /*===========================================^^methods^^====================================================*/
 	
         // mutable access to each element
@@ -141,11 +129,7 @@ namespace MathClasses
 
          Matrix3& operator *=(Matrix3 rhs)
          {
-             m1 *= rhs.m1, rhs.m4, rhs.m7;
-
-             m1 *= rhs.m1 + rhs.m4 + rhs.m7;  //still need to figure this out properly 
-
-             m1 *= (rhs.m1 + rhs.m4 + rhs.m7);
+             *this = *this * rhs;
          }
 
          Vector3 operator *(Vector3 rhs) const
@@ -181,10 +165,6 @@ namespace MathClasses
              return !(*this == rhs);
          }
 
-
-    
-    
-    
     /*===========================================^^overloads/casting^^========================================================================*/
 
 
