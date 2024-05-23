@@ -143,7 +143,7 @@ namespace MathClasses
          {
              m1 *= rhs.m1, rhs.m4, rhs.m7;
 
-             m1 *= rhs.m1 + rhs.m4 + rhs.m7;
+             m1 *= rhs.m1 + rhs.m4 + rhs.m7;  //still need to figure this out properly 
 
              m1 *= (rhs.m1 + rhs.m4 + rhs.m7);
          }
@@ -159,7 +159,20 @@ namespace MathClasses
 
          bool operator == (const Matrix3& rhs) const
          {
-             // TODO - remember about floating point imprecision!  //could probably copy the code from vector 3 (kinda remember its slightly different)
+             float m1Dist = fabsf(m1 - rhs.m1);
+             float m2Dist = fabsf(m2 - rhs.m2);
+             float m3Dist = fabsf(m3 - rhs.m3);
+             float m4Dist = fabsf(m4 - rhs.m4);
+             float m5Dist = fabsf(m5 - rhs.m5);
+             float m6Dist = fabsf(m6 - rhs.m6);
+             float m7Dist = fabsf(m7 - rhs.m7);
+             float m8Dist = fabsf(m8 - rhs.m8);
+             float m9Dist = fabsf(m9 - rhs.m9);
+             const float THRESHOLD = 0.00001f;
+
+             return m1Dist < THRESHOLD && m2Dist < THRESHOLD && m3Dist < THRESHOLD && m4Dist < THRESHOLD && m5Dist < THRESHOLD && m6Dist < THRESHOLD && m7Dist < THRESHOLD && m8Dist < THRESHOLD && m9Dist < THRESHOLD;
+                      
+                           
             
          }
 
