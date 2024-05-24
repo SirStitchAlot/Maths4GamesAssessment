@@ -89,6 +89,33 @@ namespace MathClasses
         }
 
 
+        void Vector4::Normalise() {
+            const float mag = sqrt(x * x + y * y + z * z + w * w);
+            //What if mag is zero?
+            x /= mag;
+            y /= mag;
+            z /= mag;
+            w /= mag;
+        }
+
+        Vector4 Normalised() const {
+
+            Vector4 copy = *this;
+            copy.Normalise();
+
+            return copy;
+
+        }
+
+        float Vector4::Dot(const Vector4& other) const {
+            return x * other.x + y * other.y + z * other.z + w * other.w;
+        }
+
+        Vector4 Cross(const Vector4& other) {
+            return Vector4(y * other.z - z * other.y,
+                z * other.x - x * other.z,
+                x * other.y - y * other.x,0.f);
+        }
 
 
 
@@ -248,6 +275,8 @@ namespace MathClasses
             return !(*this == rhs);
 
         }
+
+
 
 
      /*=======================================^^^overloads/casting^^^======================================================================*/

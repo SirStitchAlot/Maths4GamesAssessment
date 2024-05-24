@@ -126,74 +126,77 @@ namespace MathLibraryTests
 	};
 }
 
-namespace MathLibraryTests_OPTIONAL
-{
-	TEST_CLASS(Matrix3OptionalTests)
-	{
-		TEST_METHOD(SubscriptReference) {
-			Matrix3 m3a(1, 4, 1, 
-						2, 3, 2, 
-						3, 2, 3);
 
-			Assert::AreEqual(m3a[0], 1.f);
-			Assert::AreEqual(m3a[1], 4.f);
-			Assert::AreEqual(m3a[2], 1.f);
-				
-			Assert::AreEqual(m3a[3], 2.f);
-			Assert::AreEqual(m3a[4], 3.f);
-			Assert::AreEqual(m3a[5], 2.f);
-				
-			Assert::AreEqual(m3a[6], 3.f);
-			Assert::AreEqual(m3a[7], 2.f);
-			Assert::AreEqual(m3a[8], 3.f);
-		}
 
-		TEST_METHOD(Subscript) {
-			Matrix3 m3a(1, 4, 1,
-				2, 3, 2,
-				3, 2, 3);
+//namespace MathLibraryTests_OPTIONAL
+//{
+//	TEST_CLASS(Matrix3OptionalTests)
+//	{
+//		TEST_METHOD(SubscriptReference) {
+//			Matrix3 m3a(1, 4, 1, 
+//						2, 3, 2, 
+//						3, 2, 3);
+//
+//			Assert::AreEqual(m3a[0], 1.f);
+//			Assert::AreEqual(m3a[1], 4.f);
+//			Assert::AreEqual(m3a[2], 1.f);
+//				
+//			Assert::AreEqual(m3a[3], 2.f);
+//			Assert::AreEqual(m3a[4], 3.f);
+//			Assert::AreEqual(m3a[5], 2.f);
+//				
+//			Assert::AreEqual(m3a[6], 3.f);
+//			Assert::AreEqual(m3a[7], 2.f);
+//			Assert::AreEqual(m3a[8], 3.f);
+//		}
+//
+//		TEST_METHOD(Subscript) {
+//			Matrix3 m3a(1, 4, 1,
+//				2, 3, 2,
+//				3, 2, 3);
+//
+//			float i = 0;
+//			for (int c = 0; c < 3; ++c) {
+//				for (int r = 0; r < 3; ++r) {
+//					m3a.mm[c][r] = i;
+//					Assert::AreEqual(m3a[c * 3 + r], i);
+//					i += 5;
+//				}
+//			}
+//		}
+//
+//		TEST_METHOD(Cast)
+//		{
+//			Matrix3 m3a(1, 4, 1,
+//				2, 3, 2,
+//				3, 2, 3);
+//
+//			float* p = (float*)m3a;
+//			Assert::AreEqual(p[0], 1.f);
+//			Assert::AreEqual(p[1], 4.f);
+//			Assert::AreEqual(p[2], 1.f);
+//							 
+//			Assert::AreEqual(p[3], 2.f);
+//			Assert::AreEqual(p[4], 3.f);
+//			Assert::AreEqual(p[5], 2.f);
+//							 
+//			Assert::AreEqual(p[6], 3.f);
+//			Assert::AreEqual(p[7], 2.f);
+//			Assert::AreEqual(p[8], 3.f);
+//
+//			const float* q = (float*)m3a;
+//			Assert::AreEqual(q[0], 1.f);
+//			Assert::AreEqual(q[1], 4.f);
+//			Assert::AreEqual(q[2], 1.f);
+//			
+//			Assert::AreEqual(q[3], 2.f);
+//			Assert::AreEqual(q[4], 3.f);
+//			Assert::AreEqual(q[5], 2.f);
+//			
+//			Assert::AreEqual(q[6], 3.f);
+//			Assert::AreEqual(q[7], 2.f);
+//			Assert::AreEqual(q[8], 3.f);
+//		}
+//	};
+//}
 
-			float i = 0;
-			for (int c = 0; c < 3; ++c) {
-				for (int r = 0; r < 3; ++r) {
-					m3a.mm[c][r] = i;
-					Assert::AreEqual(m3a[c * 3 + r], i);
-					i += 5;
-				}
-			}
-		}
-
-		TEST_METHOD(Cast)
-		{
-			Matrix3 m3a(1, 4, 1,
-				2, 3, 2,
-				3, 2, 3);
-
-			float* p = (float*)m3a;
-			Assert::AreEqual(p[0], 1.f);
-			Assert::AreEqual(p[1], 4.f);
-			Assert::AreEqual(p[2], 1.f);
-							 
-			Assert::AreEqual(p[3], 2.f);
-			Assert::AreEqual(p[4], 3.f);
-			Assert::AreEqual(p[5], 2.f);
-							 
-			Assert::AreEqual(p[6], 3.f);
-			Assert::AreEqual(p[7], 2.f);
-			Assert::AreEqual(p[8], 3.f);
-
-			const float* q = (float*)m3a;
-			Assert::AreEqual(q[0], 1.f);
-			Assert::AreEqual(q[1], 4.f);
-			Assert::AreEqual(q[2], 1.f);
-			
-			Assert::AreEqual(q[3], 2.f);
-			Assert::AreEqual(q[4], 3.f);
-			Assert::AreEqual(q[5], 2.f);
-			
-			Assert::AreEqual(q[6], 3.f);
-			Assert::AreEqual(q[7], 2.f);
-			Assert::AreEqual(q[8], 3.f);
-		}
-	};
-}

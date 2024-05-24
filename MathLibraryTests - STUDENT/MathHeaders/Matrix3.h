@@ -10,7 +10,7 @@ namespace MathClasses
         //need matrix3(flaot[9])constructor
         
         
-        
+       
         
         //if something goes wrong with M*M its probably the overloaded constructor
 
@@ -97,6 +97,50 @@ namespace MathClasses
              return str;
          }
 
+         static Matrix3 MakeRotateX(float a)
+         {
+             return Matrix3(1, 0, 0,
+                 0, cosf(a), -sinf(a),
+                 0, sinf(a), cosf(a));
+         }
+
+         static Matrix3 MakeRotateY(float a)
+         {
+             return Matrix3(cosf(a), 0, -sinf(a),
+                             0, 1, 0,
+                            sinf(a), 0, cosf(a));
+         }
+
+         static Matrix3 MakeRotateZ(float a)
+         {
+             return Matrix3(cosf(a), sinf(a), 0,
+                           -sinf(a), cosf(a), 0,
+                             0, 0, 1);
+         }
+
+         static Matrix3 MakeScale(float xScale, float yScale, float zScale)
+         {
+             return Matrix3(xScale, 0.0f, 0.0f,
+                 0.0f, yScale, 0.0f,
+                 0.0f, 0.0f, zScale);
+         }
+
+         static Matrix3 MakeScale(Vector3 scale)
+         {
+             // just reuses the function we wrote above!
+             return MakeScale(scale.x, scale.y, scale.z);
+         }
+
+         static Matrix3 MakeEuler(float pitch, float yaw, float roll)
+         {
+             Matrix3 x = MakeRotateX(pitch);
+             Matrix3 y = MakeRotateY(yaw);
+             Matrix3 z = MakeRotateZ(roll);
+
+             // combine rotations in a specific order
+             return (z * y * x);
+         }
+
 
     /*===========================================^^methods^^====================================================*/
 	
@@ -118,14 +162,16 @@ namespace MathClasses
                  m3 * rhs.m1 + m6 * rhs.m2 + m9 * rhs.m3,
 
                  m1 * rhs.m4 + m4 * rhs.m5 + m7 * rhs.m6,
-                 m2 * rhs.m4 + m5 * rhs.m5 + m8 * rhs.m6,
-                 m3 * rhs.m4 + m6 * rhs.m5 + m9 * rhs.m6,
-
+                 m2 * rhs.m4 + m5 * rhs.m5 + m8 * rhs.m6,     
+                 m3 * rhs.m4 + m6 * rhs.m5 + m9 * rhs.m6,     
+                                                              
                  m1 * rhs.m7 + m4 * rhs.m8 + m7 * rhs.m9,
                  m2 * rhs.m7 + m5 * rhs.m8 + m8 * rhs.m9,
                  m3 * rhs.m7 + m6 * rhs.m8 + m9 * rhs.m9);
 
          }
+
+         
 
          Matrix3& operator *=(Matrix3 rhs)
          {

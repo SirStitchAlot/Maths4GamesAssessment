@@ -42,7 +42,7 @@ namespace MathClasses
 
         ~Vector3() {};
 
-    /*===================================^^^Structors^^^========================================================*/
+    /*===================================^^^Structors^^^========================================================*/ 
     public:
         //just prints the vectors to console
         std::string ToString() const {
