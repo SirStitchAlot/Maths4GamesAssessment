@@ -29,6 +29,21 @@ namespace MathClasses
             return colour >> 24;
         }
 
+        unsigned char GetGreen() const {}
+
+        unsigned char GetBlue() const {}
+
+        unsigned char GetAlpha() const {}
+
+        void SetRed(unsigned char red) {
+            //Slide the red bits into the correct position;
+            unsigned int v = (unsigned int)red << 24;
+            //Clear the current red values
+            colour = colour & 0x00ffffff;
+            //Put the new red values into place.
+            colour = colour | v;
+        }
+
     /*============================================^^Methods^^======================================================================================*/
 
 

@@ -18,6 +18,9 @@ namespace MathClasses
                         m11, m12, m13, m14, m15, m16;
                 };
 
+                //as a 1-d array
+                float v[16];
+
                 struct {
                     Vector4 xAxis;
                     Vector4 yAxis;
@@ -126,10 +129,72 @@ namespace MathClasses
 
             }
 
+            static Matrix4 MakeRotateX(float a)
+            {
+                return Matrix4(1, 0, 0, 0,
+                               0, cosf(a), -sinf(a), 0,
+                               0, sinf(a), cosf(a), 0,
+                               0, 0, 0, 1);
+            }
+
+            static Matrix4 MakeRotateY(float a)
+            {
+                return Matrix4(cosf(a), 0, -sinf(a), 0,
+                                0, 1, 0, 0,
+                                sinf(a), 0, cosf(a),0,
+                                0,0,0,1                         );
+            }
+
+            static Matrix4 MakeRotateZ(float a)
+            {
+                return Matrix4(cosf(a), sinf(a), 0, 0,
+                              -sinf(a), cosf(a), 0, 0,
+                               0, 0, 1,0,
+                               0,0,0,1 );
+            }
+
+            static Matrix4 MakeScale(float xScale, float yScale, float zScale)
+            {
+                return Matrix4(xScale, 0.0f, 0.0f, 0.0f,
+                               0.0f, yScale, 0.0f, 0.0f,
+                               0.0f, 0.0f, zScale, 0.0f,
+                               0.0f,0.0f,0.0f,1.f);
+            }
+
+           static Matrix4 MakeScale(Vector3 scale) {
+
+
+               return MakeScale(scale.x, scale.y, scale.z);
+
+            }
+
+           std::string ToString() const
+           {
+               std::string str = std::to_string(v[0]);
+               for (size_t i = 1; i < 9; ++i)
+               {
+                   str += ", " + std::to_string(v[i]);
+               }
+               return str;
+           }
+
+
+
 
 
 
     /*=======================================^^Methods^^===========================================================*/
+
+           // mutable access to each element
+           float& operator [](int dim) {
+               return v[dim];
+           }
+
+           // const-qualified access to each element
+           const float& operator [](int dim) const {
+               return v[dim];
+           }
+
 
             // binary * operator
             Vector4 operator * (const Vector4& v) const {

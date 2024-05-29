@@ -118,8 +118,8 @@ namespace MathClasses
          static Matrix3 MakeRotateX(float a)
          {
              return Matrix3(1, 0, 0,
-                 0, cosf(a), -sinf(a),
-                 0, sinf(a), cosf(a));
+                            0, cosf(a), -sinf(a),
+                            0, sinf(a), cosf(a));
          }
 
          static Matrix3 MakeRotateY(float a)
@@ -159,13 +159,24 @@ namespace MathClasses
              return (z * y * x);
          }
 
-         static Matrix3 MakeEuler(Vector3 uhhh) {
+         static Matrix3 MakeEuler(Vector3 rot) {
          
          
-             return MakeEuler(uhhh.x, uhhh.y, uhhh.z);
+             return MakeEuler(rot.x, rot.y, rot.z);
          
          
          }
+
+         static Matrix3 MakeTranslation(float x, float y, float z)
+         {
+             // TODO
+         }
+
+         static Matrix3 MakeTranslation(Vector3 vec)
+         {
+            return MakeTranslation(vec.x, vec.y, vec.z);
+         }
+
 
 
     /*===========================================^^methods^^====================================================*/
