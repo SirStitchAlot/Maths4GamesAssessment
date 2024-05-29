@@ -7,7 +7,10 @@ namespace MathClasses
     struct Matrix3
     {
         // Add the struct data fields and methods, as per the tutorials and exercises, here...
-        //need matrix3(flaot[9])constructor
+        //matrix transformations
+        //MakeScale(F1,f2) // this is for a 2d thingo
+        //maketranslation (f1,f2,f3)
+        //maketranslation (Vector3)
         
         
        
@@ -53,6 +56,21 @@ namespace MathClasses
         
         
         }
+
+       Matrix3(float Numbers[9]) 
+       {
+        
+           m1 = Numbers[1];
+           m2 = Numbers[2];
+           m3 = Numbers[3];
+           m4 = Numbers[4];
+           m5 = Numbers[5];
+           m6 = Numbers[6];
+           m7 = Numbers[7];
+           m8 = Numbers[8];
+           m9 = Numbers[9];
+       
+       }
 
 
 
@@ -121,8 +139,8 @@ namespace MathClasses
          static Matrix3 MakeScale(float xScale, float yScale, float zScale)
          {
              return Matrix3(xScale, 0.0f, 0.0f,
-                 0.0f, yScale, 0.0f,
-                 0.0f, 0.0f, zScale);
+                            0.0f, yScale, 0.0f,
+                            0.0f, 0.0f, zScale);
          }
 
          static Matrix3 MakeScale(Vector3 scale)
@@ -139,6 +157,14 @@ namespace MathClasses
 
              // combine rotations in a specific order
              return (z * y * x);
+         }
+
+         static Matrix3 MakeEuler(Vector3 uhhh) {
+         
+         
+             return MakeEuler(uhhh.x, uhhh.y, uhhh.z);
+         
+         
          }
 
 

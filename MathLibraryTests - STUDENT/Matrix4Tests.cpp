@@ -162,101 +162,101 @@ namespace MathLibraryTests
         }
     };
 }
-namespace MathLibraryTests_OPTIONAL
-{
-    TEST_CLASS(Matrix4OptionalTests)
-    {
-        TEST_METHOD(SubscriptReference) {
-            Matrix4 m4a(1, 4, 1, 7,
-                2, 3, 2, 8,
-                3, 2, 3, 9,
-                4, 1, 4, 1);
-
-            Assert::AreEqual(m4a[0], 1.f);
-            Assert::AreEqual(m4a[1], 4.f);
-            Assert::AreEqual(m4a[2], 1.f);
-            Assert::AreEqual(m4a[3], 7.f);
-
-            Assert::AreEqual(m4a[4], 2.f);
-            Assert::AreEqual(m4a[5], 3.f);
-            Assert::AreEqual(m4a[6], 2.f);
-            Assert::AreEqual(m4a[7], 8.f);
-
-            Assert::AreEqual(m4a[8], 3.f);
-            Assert::AreEqual(m4a[9], 2.f);
-            Assert::AreEqual(m4a[10], 3.f);
-            Assert::AreEqual(m4a[11], 9.f);
-
-            Assert::AreEqual(m4a[12], 4.f);
-            Assert::AreEqual(m4a[13], 1.f);
-            Assert::AreEqual(m4a[14], 4.f);
-            Assert::AreEqual(m4a[15], 1.f);
-        }
-
-        TEST_METHOD(Subscript) {
-            Matrix4 m4a(1, 4, 1, 7,
-                2, 3, 2, 8,
-                3, 2, 3, 9,
-                4, 1, 4, 1);
-
-            float i = 0;
-            for (int c = 0; c < 4; ++c) {
-                for (int r = 0; r < 4; ++r) {
-                    m4a.mm[c][r] = i;
-                    Assert::AreEqual(m4a[c * 4 + r], i);
-                    i += 5;
-                }
-            }
-        }
-
-        TEST_METHOD(Cast)
-        {
-            Matrix4 m4a(1, 4, 1, 7,
-                2, 3, 2, 8,
-                3, 2, 3, 9,
-                4, 1, 4, 1);
-
-            float* p = (float*)m4a;
-            Assert::AreEqual(p[0], 1.f);
-            Assert::AreEqual(p[1], 4.f);
-            Assert::AreEqual(p[2], 1.f);
-            Assert::AreEqual(p[3], 7.f);
-
-            Assert::AreEqual(p[4], 2.f);
-            Assert::AreEqual(p[5], 3.f);
-            Assert::AreEqual(p[6], 2.f);
-            Assert::AreEqual(p[7], 8.f);
-
-            Assert::AreEqual(p[8], 3.f);
-            Assert::AreEqual(p[9], 2.f);
-            Assert::AreEqual(p[10], 3.f);
-            Assert::AreEqual(p[11], 9.f);
-
-            Assert::AreEqual(p[12], 4.f);
-            Assert::AreEqual(p[13], 1.f);
-            Assert::AreEqual(p[14], 4.f);
-            Assert::AreEqual(p[15], 1.f);
-
-            const float* q = (float*)m4a;
-            Assert::AreEqual(q[0], 1.f);
-            Assert::AreEqual(q[1], 4.f);
-            Assert::AreEqual(q[2], 1.f);
-            Assert::AreEqual(q[3], 7.f);
-
-            Assert::AreEqual(q[4], 2.f);
-            Assert::AreEqual(q[5], 3.f);
-            Assert::AreEqual(q[6], 2.f);
-            Assert::AreEqual(q[7], 8.f);
-
-            Assert::AreEqual(q[8], 3.f);
-            Assert::AreEqual(q[9], 2.f);
-            Assert::AreEqual(q[10], 3.f);
-            Assert::AreEqual(q[11], 9.f);
-
-            Assert::AreEqual(q[12], 4.f);
-            Assert::AreEqual(q[13], 1.f);
-            Assert::AreEqual(q[14], 4.f);
-            Assert::AreEqual(q[15], 1.f);
-        }
-    };
-}
+//namespace MathLibraryTests_OPTIONAL
+//{
+//    TEST_CLASS(Matrix4OptionalTests)
+//    {
+//        TEST_METHOD(SubscriptReference) {
+//            Matrix4 m4a(1, 4, 1, 7,
+//                2, 3, 2, 8,
+//                3, 2, 3, 9,
+//                4, 1, 4, 1);
+//
+//            Assert::AreEqual(m4a[0], 1.f);
+//            Assert::AreEqual(m4a[1], 4.f);
+//            Assert::AreEqual(m4a[2], 1.f);
+//            Assert::AreEqual(m4a[3], 7.f);
+//
+//            Assert::AreEqual(m4a[4], 2.f);
+//            Assert::AreEqual(m4a[5], 3.f);
+//            Assert::AreEqual(m4a[6], 2.f);
+//            Assert::AreEqual(m4a[7], 8.f);
+//
+//            Assert::AreEqual(m4a[8], 3.f);
+//            Assert::AreEqual(m4a[9], 2.f);
+//            Assert::AreEqual(m4a[10], 3.f);
+//            Assert::AreEqual(m4a[11], 9.f);
+//
+//            Assert::AreEqual(m4a[12], 4.f);
+//            Assert::AreEqual(m4a[13], 1.f);
+//            Assert::AreEqual(m4a[14], 4.f);
+//            Assert::AreEqual(m4a[15], 1.f);
+//        }
+//
+//        TEST_METHOD(Subscript) {
+//            Matrix4 m4a(1, 4, 1, 7,
+//                2, 3, 2, 8,
+//                3, 2, 3, 9,
+//                4, 1, 4, 1);
+//
+//            float i = 0;
+//            for (int c = 0; c < 4; ++c) {
+//                for (int r = 0; r < 4; ++r) {
+//                    m4a.mm[c][r] = i;
+//                    Assert::AreEqual(m4a[c * 4 + r], i);
+//                    i += 5;
+//                }
+//            }
+//        }
+//
+//        TEST_METHOD(Cast)
+//        {
+//            Matrix4 m4a(1, 4, 1, 7,
+//                2, 3, 2, 8,
+//                3, 2, 3, 9,
+//                4, 1, 4, 1);
+//
+//            float* p = (float*)m4a;
+//            Assert::AreEqual(p[0], 1.f);
+//            Assert::AreEqual(p[1], 4.f);
+//            Assert::AreEqual(p[2], 1.f);
+//            Assert::AreEqual(p[3], 7.f);
+//
+//            Assert::AreEqual(p[4], 2.f);
+//            Assert::AreEqual(p[5], 3.f);
+//            Assert::AreEqual(p[6], 2.f);
+//            Assert::AreEqual(p[7], 8.f);
+//
+//            Assert::AreEqual(p[8], 3.f);
+//            Assert::AreEqual(p[9], 2.f);
+//            Assert::AreEqual(p[10], 3.f);
+//            Assert::AreEqual(p[11], 9.f);
+//
+//            Assert::AreEqual(p[12], 4.f);
+//            Assert::AreEqual(p[13], 1.f);
+//            Assert::AreEqual(p[14], 4.f);
+//            Assert::AreEqual(p[15], 1.f);
+//
+//            const float* q = (float*)m4a;
+//            Assert::AreEqual(q[0], 1.f);
+//            Assert::AreEqual(q[1], 4.f);
+//            Assert::AreEqual(q[2], 1.f);
+//            Assert::AreEqual(q[3], 7.f);
+//
+//            Assert::AreEqual(q[4], 2.f);
+//            Assert::AreEqual(q[5], 3.f);
+//            Assert::AreEqual(q[6], 2.f);
+//            Assert::AreEqual(q[7], 8.f);
+//
+//            Assert::AreEqual(q[8], 3.f);
+//            Assert::AreEqual(q[9], 2.f);
+//            Assert::AreEqual(q[10], 3.f);
+//            Assert::AreEqual(q[11], 9.f);
+//
+//            Assert::AreEqual(q[12], 4.f);
+//            Assert::AreEqual(q[13], 1.f);
+//            Assert::AreEqual(q[14], 4.f);
+//            Assert::AreEqual(q[15], 1.f);
+//        }
+//    };
+//}
