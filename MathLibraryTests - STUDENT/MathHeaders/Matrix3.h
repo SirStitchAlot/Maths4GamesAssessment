@@ -169,7 +169,9 @@ namespace MathClasses
 
          static Matrix3 MakeTranslation(float x, float y, float z)
          {
-             // TODO
+             return Matrix3(1, 0, 0,
+                            0, 1, 0,
+                            x, y, z);
          }
 
          static Matrix3 MakeTranslation(Vector3 vec)

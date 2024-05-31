@@ -171,14 +171,46 @@ namespace MathClasses
            std::string ToString() const
            {
                std::string str = std::to_string(v[0]);
-               for (size_t i = 1; i < 9; ++i)
+               for (size_t i = 1; i < 16; ++i)
                {
                    str += ", " + std::to_string(v[i]);
                }
                return str;
            }
 
+           static Matrix4 MakeEuler(float pitch, float yaw, float roll)
+           {
+               Matrix4 x = MakeRotateX(pitch);
+               Matrix4 y = MakeRotateY(yaw);
+               Matrix4 z = MakeRotateZ(roll);
 
+               // combine rotations in a specific order
+               return (z * y * x);
+           }
+
+           static Matrix4 MakeEuler(Vector3 rot){
+               
+
+
+              return MakeEuler(rot.x, rot.y, rot.z);
+
+
+               
+           }
+
+           static Matrix4 MakeTranslation(float x, float y, float z)
+           {
+               return Matrix4(1,0,0,0,
+                              0,1,0,0,
+                              0,0,1,0,
+                              x,y,z,1);
+           }
+
+           static Matrix4 MakeTranslation(Vector3 vec) {
+
+               return MakeTranslation(vec.x, vec.y, vec.z);
+
+           }
 
 
 
