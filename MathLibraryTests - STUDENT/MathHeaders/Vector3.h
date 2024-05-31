@@ -247,19 +247,33 @@ namespace MathClasses
 
 		}
 
-		bool operator == (const Vector3& rhs) {
+		bool operator == (const Vector3& rhs) const {
 
-			float xDist = fabsf(x - rhs.x);
-			float yDist = fabsf(y - rhs.y);
-			float zDist = fabsf(z - rhs.z);
+			bool success = false;
+			const float THRESHOLD = 0.0000f;
 
-			const float THRESHOLD = 0.01f;
+			if (fabsf(x - rhs.x) < THRESHOLD &&
+				fabsf(y - rhs.y) < THRESHOLD &&
+				fabsf(z - rhs.z) < THRESHOLD) {
 
-			return xDist < THRESHOLD && yDist < THRESHOLD && zDist < THRESHOLD;
+
+
+				success = true;
+
+			}
+
+			/*float xDist =
+			float yDist =
+			float zDist =*/
+				
+			return success;
+				
+				
+				/*xDist < THRESHOLD && yDist < THRESHOLD && zDist < THRESHOLD;*/
 
 		}
 
-		bool operator != (const Vector3& rhs) {
+		bool operator != (const Vector3& rhs) const {
 
 			return !(*this == rhs);
 
