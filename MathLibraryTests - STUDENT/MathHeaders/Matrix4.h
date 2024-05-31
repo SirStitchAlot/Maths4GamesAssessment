@@ -57,22 +57,22 @@ namespace MathClasses
             Matrix4(float Numbers[16])
             {
 
-                m1 = Numbers[1];
-                m2 = Numbers[2];
-                m3 = Numbers[3];
-                m4 = Numbers[4];
-                m5 = Numbers[5];
-                m6 = Numbers[6];
-                m7 = Numbers[7];
-                m8 = Numbers[8];
-                m9 = Numbers[9];
-                m10 = Numbers[10];
-                m11 = Numbers[11];
-                m12 = Numbers[12];
-                m13 = Numbers[13];
-                m14 = Numbers[14];
-                m15 = Numbers[15];
-                m16 = Numbers[16];
+                m1 = Numbers[0];
+                m2 = Numbers[1];
+                m3 = Numbers[2];
+                m4 = Numbers[3];
+                m5 = Numbers[4];
+                m6 = Numbers[5];
+                m7 = Numbers[6];
+                m8 = Numbers[7];
+                m9 = Numbers[8];
+                m10 = Numbers[9];
+                m11 = Numbers[10];
+                m12 = Numbers[11];
+                m13 = Numbers[12];
+                m14 = Numbers[13];
+                m15 = Numbers[14];
+                m16 = Numbers[15];
             
             
    
@@ -246,10 +246,8 @@ namespace MathClasses
                 return result;
             }
 
-
-
             // binary * operator
-            Matrix4 Matrix4::operator * (const Matrix4& other) const {
+            Matrix4 operator * (const Matrix4& other) const {
                 Matrix4 result;
 
                 for (int r = 0; r < 4; ++r) {

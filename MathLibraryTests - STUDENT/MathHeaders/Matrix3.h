@@ -1,5 +1,5 @@
 #pragma once
-#include "Vector3.h"
+
 #include <string>
 #include <cmath>
 namespace MathClasses
@@ -60,15 +60,15 @@ namespace MathClasses
        Matrix3(float Numbers[9]) 
        {
         
-           m1 = Numbers[1];
-           m2 = Numbers[2];
-           m3 = Numbers[3];
-           m4 = Numbers[4];
-           m5 = Numbers[5];
-           m6 = Numbers[6];
-           m7 = Numbers[7];
-           m8 = Numbers[8];
-           m9 = Numbers[9];
+           m1 = Numbers[0];
+           m2 = Numbers[1];
+           m3 = Numbers[2];
+           m4 = Numbers[3];
+           m5 = Numbers[4];
+           m6 = Numbers[5];
+           m7 = Numbers[6];
+           m8 = Numbers[7];
+           m9 = Numbers[8];
        
        }
 
