@@ -253,7 +253,7 @@ namespace MathClasses
 			float yDist = fabsf(y - rhs.y);
 			float zDist = fabsf(z - rhs.z);
 
-			const float THRESHOLD = 0.00001f;
+			const float THRESHOLD = 0.01f;
 
 			return xDist < THRESHOLD && yDist < THRESHOLD && zDist < THRESHOLD;
 
