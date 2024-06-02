@@ -70,6 +70,9 @@ namespace MathClasses
            m8 = Numbers[7];
            m9 = Numbers[8];
        
+
+   
+
        }
 
 
@@ -124,9 +127,9 @@ namespace MathClasses
 
          static Matrix3 MakeRotateY(float a)
          {
-             return Matrix3(cosf(a), 0, -sinf(a),
-                             0, 1, 0,
-                            sinf(a), 0, cosf(a));
+             return Matrix3(cosf(a), 0, sinf(a),
+                             0, 1, 0,                //something is mixed around here
+                            -sinf(a), 0, cosf(a));
          }
 
          static Matrix3 MakeRotateZ(float a)

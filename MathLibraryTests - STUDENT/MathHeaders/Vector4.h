@@ -92,10 +92,15 @@ namespace MathClasses
         void Vector4::Normalise() {
             const float mag = sqrt(x * x + y * y + z * z + w * w);
             //What if mag is zero?
+            if (mag > 0.0f)
+            {
             x /= mag;
             y /= mag;
             z /= mag;
             w /= mag;
+
+            }
+           
         }
 
         Vector4 Normalised() const {
@@ -257,17 +262,23 @@ namespace MathClasses
 
         }
 
-        bool operator == (const Vector4& rhs) {
+        bool operator == (const Vector4& rhs) const {
 
-            float xDist = fabsf(x - rhs.x);
-            float yDist = fabsf(y - rhs.y);
-            float zDist = fabsf(z - rhs.z);
-            float wDist = fabsf(w - rhs.w);
-
+            bool success = false;
             const float THRESHOLD = 0.00001f;
 
-            return xDist < THRESHOLD && yDist < THRESHOLD && zDist < THRESHOLD && wDist<THRESHOLD;
+            if (fabsf(x - rhs.x) < THRESHOLD &&
+                fabsf(y - rhs.y) < THRESHOLD &&
+                fabsf(z - rhs.z) < THRESHOLD&&
+                
+                fabsf(w - rhs.w) < THRESHOLD ){
 
+
+                success = true;
+
+            }
+
+            return success;
         }
 
         bool operator != (const Vector4& rhs) {

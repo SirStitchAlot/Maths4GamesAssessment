@@ -76,10 +76,13 @@ namespace MathClasses
         void Normalise() {
 
             float m = Magnitude();
-
-            x /= m;
+			if (m > 0.0f)
+			{
+			x /= m;
             y /= m;
             z /= m;
+			}
+            
 
         }
 
@@ -250,7 +253,7 @@ namespace MathClasses
 		bool operator == (const Vector3& rhs) const {
 
 			bool success = false;
-			const float THRESHOLD = 0.0000f;
+			const float THRESHOLD = 0.00001f;
 
 			if (fabsf(x - rhs.x) < THRESHOLD &&
 				fabsf(y - rhs.y) < THRESHOLD &&
@@ -261,16 +264,8 @@ namespace MathClasses
 				success = true;
 
 			}
-
-			/*float xDist =
-			float yDist =
-			float zDist =*/
 				
-			return success;
-				
-				
-				/*xDist < THRESHOLD && yDist < THRESHOLD && zDist < THRESHOLD;*/
-
+			return success;	
 		}
 
 		bool operator != (const Vector3& rhs) const {

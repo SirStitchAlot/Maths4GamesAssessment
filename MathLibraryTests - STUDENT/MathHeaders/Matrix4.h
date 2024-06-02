@@ -139,9 +139,9 @@ namespace MathClasses
 
             static Matrix4 MakeRotateY(float a)
             {
-                return Matrix4(cosf(a), 0, -sinf(a), 0,
+                return Matrix4(cosf(a), 0, sinf(a), 0,
                                 0, 1, 0, 0,
-                                sinf(a), 0, cosf(a),0,
+                                -sinf(a), 0, cosf(a),0,
                                 0,0,0,1                         );
             }
 
@@ -246,21 +246,23 @@ namespace MathClasses
                 return result;
             }
 
-            // binary * operator
-            Matrix4 operator * (const Matrix4& other) const {
-                Matrix4 result;
+            //// binary * operator
+            //Matrix4 operator * (const Matrix4& other) const {
+            //    Matrix4 result;
 
-                for (int r = 0; r < 4; ++r) {
-                    for (int c = 0; c < 4; ++c) {
-                        float v = 0.0f;
-                        for (int i = 0; 0 < 4; ++i) {
-                            v += data[i][r] * other.data[c][i];
-                        }
-                        result.data[c][r] = v;
-                    }
-                }
-                return result;
-            }
+            //    for (int r = 0; r < 4; ++r) {
+            //        for (int c = 0; c < 4; ++c) {
+            //            float v = 0.0f;
+            //            for (int i = 0; 0 < 4; ++i) {
+            //                v += data[i][r] * other.data[c][i];
+            //            }
+            //            result.data[c][r] = v;
+            //        }
+            //    }
+            //    return result;
+            //}
+
+
 
             bool operator == (const Matrix4& rhs) const
             {
@@ -293,6 +295,30 @@ namespace MathClasses
             bool operator != (const Matrix4& rhs) const
             {
                 return !(*this == rhs);
+            }
+
+            Matrix4 operator *(Matrix4 rhs) const
+            {
+                return Matrix4(
+                    m1 * rhs.m1 + m5 * rhs.m2 +  m9 * rhs.m3 + m13 * rhs.m4,
+                    m2 * rhs.m1 + m6 * rhs.m2 + m10 * rhs.m3 + m14 * rhs.m4,
+                    m3 * rhs.m1 + m7 * rhs.m2 + m11 * rhs.m3 + m15 * rhs.m4,
+                    m4 * rhs.m1 + m8 * rhs.m2 + m12 * rhs.m3 + m16 * rhs.m4,
+
+                    m1 * rhs.m5 + m5 * rhs.m6 +  m9 * rhs.m7 + m13 * rhs.m8,
+                    m2 * rhs.m5 + m6 * rhs.m6 + m10 * rhs.m7 + m14 * rhs.m8,
+                    m3 * rhs.m5 + m7 * rhs.m6 + m11 * rhs.m7 + m15 * rhs.m8,
+                    m4 * rhs.m5 + m8 * rhs.m6 + m12 * rhs.m7 + m16 * rhs.m8,
+
+                    m1 * rhs.m9 + m5 * rhs.m10 +  m9 * rhs.m11 + m13 * rhs.m12,
+                    m2 * rhs.m9 + m6 * rhs.m10 + m10 * rhs.m11 + m14 * rhs.m12,
+                    m3 * rhs.m9 + m7 * rhs.m10 + m11 * rhs.m11 + m15 * rhs.m12,
+                    m4 * rhs.m9 + m8 * rhs.m10 + m12 * rhs.m11 + m16 * rhs.m12,
+
+                    m1 * rhs.m13 + m5 * rhs.m14 +  m9 * rhs.m15 + m13 * rhs.m16,
+                    m2 * rhs.m13 + m6 * rhs.m14 + m10 * rhs.m15 + m14 * rhs.m16,
+                    m3 * rhs.m13 + m7 * rhs.m14 + m11 * rhs.m15 + m15 * rhs.m16,
+                    m4 * rhs.m13 + m8 * rhs.m14 + m12 * rhs.m15 + m16 * rhs.m16);
             }
 
 
