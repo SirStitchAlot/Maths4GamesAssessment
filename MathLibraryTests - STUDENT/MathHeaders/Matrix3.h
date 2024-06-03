@@ -75,6 +75,8 @@ namespace MathClasses
 
        }
 
+     
+
 
 
         ~Matrix3() {};
@@ -144,6 +146,13 @@ namespace MathClasses
              return Matrix3(xScale, 0.0f, 0.0f,
                             0.0f, yScale, 0.0f,
                             0.0f, 0.0f, zScale);
+         }
+         //makes a scale for 2d 
+         static Matrix3 MakeScale(float xScale, float yScale)
+         {
+             return Matrix3(xScale, 0.0f, 0.0f,
+                 0.0f, yScale, 0.0f,
+                 0.0f, 0.0f, 1.0f);
          }
 
          static Matrix3 MakeScale(Vector3 scale)

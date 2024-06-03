@@ -252,7 +252,7 @@ namespace MathClasses
 
             //    for (int r = 0; r < 4; ++r) {
             //        for (int c = 0; c < 4; ++c) {
-            //            float v = 0.0f;
+            //            float v = 0.0f;                                  //no idea why this is here
             //            for (int i = 0; 0 < 4; ++i) {
             //                v += data[i][r] * other.data[c][i];
             //            }

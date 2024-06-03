@@ -98,15 +98,15 @@ namespace MathLibraryTests
 
 		}
 		// make scale from floats
-		//TEST_METHOD(MakeScaleFloat2D)
-		//{
-		//	Matrix3 actual = Matrix3::MakeScale(2.0f, 3.0f);
+		TEST_METHOD(MakeScaleFloat2D)
+		{
+			Matrix3 actual = Matrix3::MakeScale(2.0f, 3.0f);
 
-		//	Assert::AreEqual(
-		//		Matrix3(2.0f, 0.0f, 0.0f,
-		//				0.0f, 3.0f, 0.0f,
-		//				0.0f, 0.0f, 1.0f), actual);
-		//}
+			Assert::AreEqual(
+				Matrix3(2.0f, 0.0f, 0.0f,
+						0.0f, 3.0f, 0.0f,
+						0.0f, 0.0f, 1.0f), actual);
+		}
 		// make scale from floats
 		TEST_METHOD(MakeScaleFloat3D)
 		{
