@@ -33,6 +33,8 @@ namespace MathClasses
 
         }
 
+        ~Colour() {};
+
 
     /*==========================================^^Structors^^=======================================================================*/
 
@@ -90,28 +92,6 @@ namespace MathClasses
             //Put the new alpha values into place.
             colour = colour | v;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

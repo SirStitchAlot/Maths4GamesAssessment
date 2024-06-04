@@ -86,6 +86,11 @@ namespace MathClasses
 
 
     /*===================================^^^Structors^^^========================================================*/
+           
+
+            
+            
+            
             void setScaled(float x, float y, float z) {
                 // set scale of each axis
                 xAxis = { x, 0, 0, 0 };
