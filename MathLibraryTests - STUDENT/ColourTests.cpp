@@ -101,8 +101,23 @@ namespace MathLibraryTests
 			Colour actual(94, 64, 0, 255);
 			auto alpha = actual.GetRed();
 			Assert::AreEqual(alpha, (Byte)0b01011110);
+		}
 
+		TEST_METHOD(RedToGreen) 
+		{ 
+
+			Colour actual(255, 64, 0, 255);
+			actual.colour = actual.colour >> 8;
+			auto green = actual.GetGreen();
+			Assert::AreEqual(green, (Byte)255);
 		
 		}
+
+
+
+
+
+
+
 	};
 }
