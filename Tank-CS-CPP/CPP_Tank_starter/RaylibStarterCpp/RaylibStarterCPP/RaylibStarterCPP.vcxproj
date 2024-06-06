@@ -175,21 +175,14 @@
     <ClCompile Include="Game_01.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Program.cpp" />
-    <ClCompile Include="SceneObjects.cpp" />
-    <ClCompile Include="SpriteObjects.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="SpriteObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game_01.h" />
     <ClInclude Include="Helper.h" />
-    <ClInclude Include="MathHeaders\Colour.h" />
-    <ClInclude Include="MathHeaders\Matrix3.h" />
-    <ClInclude Include="MathHeaders\Matrix4.h" />
-    <ClInclude Include="MathHeaders\Vector3.h" />
-    <ClInclude Include="MathHeaders\Vector4.h" />
-    <ClInclude Include="Program.h" />
-    <ClInclude Include="SceneObjects.h" />
-    <ClInclude Include="SpriteObjects.h" />
+    <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="SpriteObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

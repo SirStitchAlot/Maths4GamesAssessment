@@ -13,59 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="MathHeaders">
-      <UniqueIdentifier>{e49ae367-f7cd-4ce2-831d-fe232c1986b5}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SceneObjects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteObjects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Program.cpp">
+    <ClCompile Include="Game_01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Helper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game_01.cpp">
+    <ClCompile Include="SceneObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SceneObjects.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MathHeaders\Vector4.h">
-      <Filter>MathHeaders</Filter>
-    </ClInclude>
-    <ClInclude Include="MathHeaders\Vector3.h">
-      <Filter>MathHeaders</Filter>
-    </ClInclude>
-    <ClInclude Include="MathHeaders\Matrix4.h">
-      <Filter>MathHeaders</Filter>
-    </ClInclude>
-    <ClInclude Include="MathHeaders\Matrix3.h">
-      <Filter>MathHeaders</Filter>
-    </ClInclude>
-    <ClInclude Include="MathHeaders\Colour.h">
-      <Filter>MathHeaders</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteObjects.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Program.h">
+    <ClInclude Include="Game_01.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Game_01.h">
+    <ClInclude Include="SceneObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

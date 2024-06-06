@@ -32,6 +32,8 @@ int main(int argc, char* argv[])
 {
     // Initialization
     //--------------------------------------------------------------------------------------
+    
+    
     int screenWidth = 800;
     int screenHeight = 450;
 

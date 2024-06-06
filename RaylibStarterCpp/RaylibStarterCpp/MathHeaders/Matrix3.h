@@ -1,4 +1,5 @@
 #pragma once
+#include "MathHeaders/Vector3.h"
 
 #include <string>
 #include <cmath>
