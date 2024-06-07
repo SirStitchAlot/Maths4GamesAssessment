@@ -6,7 +6,7 @@ SceneObject::SceneObject(){
 SceneObject::~SceneObject(){
 	// 1 - remove children from parent
 	// code
-	// 2 - deleye pointer
+	// 2 - delete pointer
 	delete parent;
 	parent = nullptr;
 

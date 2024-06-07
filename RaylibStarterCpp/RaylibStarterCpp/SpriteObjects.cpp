@@ -1,4 +1,4 @@
-
+#include "SpriteObjects.h"
 /*=====================================^^todo^^=================================================*/
 
 
@@ -13,7 +13,7 @@
 
 /*=====================================^^structors^^=================================================*/
 
-void SpriteObjects::Load(const char* filename)
+void SpriteObjects::Load(string filename)
 {
 
 	
