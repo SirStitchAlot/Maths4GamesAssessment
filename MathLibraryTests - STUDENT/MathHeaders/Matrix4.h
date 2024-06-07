@@ -293,8 +293,6 @@ namespace MathClasses
 
                 return m1Dist < THRESHOLD && m2Dist < THRESHOLD && m3Dist < THRESHOLD && m4Dist < THRESHOLD && m5Dist < THRESHOLD && m6Dist < THRESHOLD && m7Dist < THRESHOLD && m8Dist < THRESHOLD && m9Dist < THRESHOLD && m10Dist < THRESHOLD && m11Dist < THRESHOLD && m12Dist < THRESHOLD&& m13Dist < THRESHOLD&& m14Dist < THRESHOLD&& m15Dist < THRESHOLD&& m16Dist < THRESHOLD;
 
-
-
             }
 
             bool operator != (const Matrix4& rhs) const

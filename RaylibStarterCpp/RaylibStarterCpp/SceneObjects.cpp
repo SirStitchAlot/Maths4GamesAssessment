@@ -2,16 +2,6 @@
 
 /*=====================================^^todo^^=================================================*/
 
-
-
-
-
-
-
-
-
-/*=====================================^^properties^^=================================================*/
-
 SceneObjects::SceneObjects() {
 
 	LocalTransform.MakeIdentity();
@@ -20,19 +10,21 @@ SceneObjects::SceneObjects() {
 
 SceneObjects::~SceneObjects() {
 
-	//idk lol
+	
 
 };
 
-
-
-
-
-
-
-
-
 /*=====================================^^structors^^=================================================*/
+
+MathClasses::Matrix3 SceneObjects::GetLocalTransform()
+{
+	return LocalTransform.Transposed();
+}
+
+MathClasses::Matrix3 SceneObjects::GetGlobalTransform() 
+{
+	return GlobalTransform.Transposed();
+}
 
 void SceneObjects::Update(float  deltaTime) {};
 

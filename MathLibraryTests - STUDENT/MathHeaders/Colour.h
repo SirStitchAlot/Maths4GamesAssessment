@@ -31,6 +31,8 @@ namespace MathClasses
         
             colour = (red << 24) + (green << 16) + (blue << 8) + (alpha);
 
+
+
         }
 
         ~Colour() {};
