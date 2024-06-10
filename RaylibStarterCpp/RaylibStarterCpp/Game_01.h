@@ -1,6 +1,10 @@
 #pragma once
 
+#include <iostream>
 #include <raymath.h> 
+#include "SceneObjects.h"
+#include "SpriteObjects.h"
+
 
 
 class Game_01
@@ -29,9 +33,9 @@ private:
 
 	bool scale_active = false;
 
-	//SceneObject tankobject = new sceneobject();
+	SceneObjects * tankObject = new SceneObjects();
 
-	//spriteobject tanksprite = new spriteobject();
+	SpriteObjects * tankSprite = new SpriteObjects();
 
 
 
@@ -41,13 +45,19 @@ private:
 /*=====================================^^properties^^=================================================*/
 public:
 
+	Game_01();
+
+	~Game_01();
 
 /*=====================================^^structors^^=================================================*/
 
+	void Init();
 
+	void Shutdown();
 
+	void Update();
 
-
+	void Draw();
 
 
 /*=====================================^^methods^^=================================================*/

@@ -3,9 +3,10 @@
 #include <raymath.h>
 #include <iostream>
 #include "MathHeaders/Matrix3.h"
+#include <vector>;
 using namespace std;
 
-#include "Helper.h"
+
 class SceneObjects
 {
 
@@ -18,7 +19,8 @@ protected:
 	MathClasses::Matrix3 LocalTransform;
 	MathClasses::Matrix3 GlobalTransform;
 	SceneObjects* parent = nullptr;
-
+	/*MathClasses::Vector3<SceneObjects> children;*/
+	vector<SceneObjects> children;
 
 
 
@@ -37,15 +39,20 @@ public:
 
 	MathClasses::Matrix3 GetGlobalTransform();
 
-	void Update(float deltaTime);
+	void Update();
 
-	void Draw();
+	virtual void Draw();
 
+	SceneObjects GetChild(int index);
 
+	int GetChildCount();
 
-
+	void AddChild(SceneObjects* child);
 
 /*=====================================^^methods^^=================================================*/
+
+
+	
 
 /*=====================================^^overloads^^=================================================*/
 

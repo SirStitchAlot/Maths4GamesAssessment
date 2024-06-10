@@ -28,6 +28,14 @@
 
 #pragma warning(pop)
 
+// //////////////////////////////////////////
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+#include "Game_01.h"
+
 int main(int argc, char* argv[])
 {
     // Initialization
@@ -40,6 +48,9 @@ int main(int argc, char* argv[])
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
     SetTargetFPS(60);
+
+    Game_01 GM = Game_01();
+    GM.Init();
     //--------------------------------------------------------------------------------------
 
     // Main game loop
@@ -47,7 +58,11 @@ int main(int argc, char* argv[])
     {
         // Update
         //----------------------------------------------------------------------------------
-        // TODO: Update your variables here
+        GM.Update();
+         
+         
+         
+         
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -55,8 +70,8 @@ int main(int argc, char* argv[])
         BeginDrawing();
 
         ClearBackground(BLACK);
-
-        DrawText("Good Luck Sam", 190, 200, 20, LIGHTGRAY);
+        GM.Draw();
+        
 
         EndDrawing();
         //----------------------------------------------------------------------------------
@@ -64,6 +79,11 @@ int main(int argc, char* argv[])
 
     // De-Initialization
     //--------------------------------------------------------------------------------------   
+    
+    GM.Shutdown();
+    
+    
+    
     CloseWindow();        // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 

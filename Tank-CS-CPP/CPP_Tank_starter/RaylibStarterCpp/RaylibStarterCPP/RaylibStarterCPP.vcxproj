@@ -173,14 +173,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game_01.cpp" />
-    <ClCompile Include="Helper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneObject.cpp" />
     <ClCompile Include="SpriteObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game_01.h" />
-    <ClInclude Include="Helper.h" />
     <ClInclude Include="SceneObject.h" />
     <ClInclude Include="SpriteObject.h" />
   </ItemGroup>

@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-#include "Helper.h"
+
 
 class SceneObject{
 public:	

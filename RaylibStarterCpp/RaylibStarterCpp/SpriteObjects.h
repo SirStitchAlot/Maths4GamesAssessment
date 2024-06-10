@@ -5,7 +5,7 @@
 using namespace std;
 
 #include "SceneObjects.h"
-#include "Helper.h"
+
 class SpriteObjects : public SceneObjects
 {
 
@@ -16,6 +16,10 @@ private:
 
 	Texture2D texture = Texture2D();
 	Image image = Image();
+	
+	float Width;
+	float Height;
+
 
 
 
@@ -32,6 +36,8 @@ public:
 
 /*=====================================^^structors^^=================================================*/
 
+	virtual void Draw() override;
+	
 	void Load(string filename);
 
 
