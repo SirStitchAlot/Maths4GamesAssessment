@@ -13,6 +13,9 @@ Game_01::~Game_01() {
 
 void Game_01::Init() {
 
+	
+
+
 	SetTargetFPS(60);
 
 	// set up the scene object hierarchy - parent the turret to the base, 
@@ -30,7 +33,8 @@ void Game_01::Update() {
 			if (IsKeyDown(KEY_W)) // code;
 				if (IsKeyDown(KEY_S)) // code;
 
-					tankObject->Update();
+					tankObject->Update(7); // just put 7 here because i want to stop getting errors
+
 
 }
 
@@ -38,11 +42,9 @@ void Game_01::Draw() {
 	tankObject->Draw();
 }
 
+void SceneObjects::OnDraw() {}
 
-
-
-
-
+void SceneObjects::OnUpdate(float deltatime) {}
 
 /*=====================================^^methods^^=================================================*/
 

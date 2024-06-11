@@ -1,5 +1,6 @@
 #pragma once
 
+#include <raylib.h>
 #include <raymath.h>
 #include <iostream>
 using namespace std;
@@ -39,6 +40,8 @@ public:
 	virtual void Draw() override;
 	
 	void Load(string filename);
+
+	void OnDraw() override;
 
 
 

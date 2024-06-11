@@ -1,7 +1,7 @@
 #pragma once
 class Program
 {
-
+	//I think this is just main and this is useless
 /*=====================================^^todo^^=================================================*/
 private:
 

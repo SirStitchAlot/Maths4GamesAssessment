@@ -26,18 +26,37 @@ SceneObjects::~SceneObjects() {
 
 MathClasses::Matrix3 SceneObjects::GetLocalTransform()
 {
-	return LocalTransform.Transposed();
+	return LocalTransform;
 }
 
 MathClasses::Matrix3 SceneObjects::GetGlobalTransform() 
 {
-	return GlobalTransform.Transposed();
+	return GlobalTransform;
 }
 
-void SceneObjects::Update() {};
+void SceneObjects::Update(float deltatime) {
+	OnUpdate(deltatime); // run OnUpdate behaviour
+
+	// update children
+	for(SceneObjects child : children)
+	{
+		child.Update(deltatime);
+	}
+
+};
+
 
 void SceneObjects::Draw() {
 
+	//run Ondraw
+	OnDraw();
+
+	//drawchildren
+
+	for (SceneObjects child :children)
+	{
+		child.Draw();
+	}
 
 }
 
@@ -61,10 +80,20 @@ void SceneObjects::AddChild(SceneObjects* child)
 
 	}
 
-
-
-
 }
+
+
+
+//no idea what this one is doing
+
+//void SceneObjects::RemoveChild(SceneObjects child) {
+//
+//	if (children
+//	{
+//
+//	}
+//
+//}
 
 /*=====================================^^methods^^=================================================*/
 

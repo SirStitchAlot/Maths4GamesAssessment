@@ -1,5 +1,5 @@
 #pragma once
-
+//#include <chrono> //not sure if this is the right way to do the time
 #include <iostream>
 #include <raymath.h> 
 #include "SceneObjects.h"
@@ -12,6 +12,8 @@ class Game_01
 
 /*=====================================^^todo^^=================================================*/
 private:
+
+	//std::chrono::high_resolution_clock::time_point stopwatch; //<---//not sure if this is the right way to do the time
 
 	long CurrentTime = 0;
 

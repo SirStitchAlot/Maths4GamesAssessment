@@ -26,6 +26,7 @@ protected:
 
 
 
+
 /*=====================================^^properties^^=================================================*/
 public:
 	SceneObjects();
@@ -39,15 +40,28 @@ public:
 
 	MathClasses::Matrix3 GetGlobalTransform();
 
-	void Update();
+	void Update(float deltatime);
 
 	virtual void Draw();
+
+	virtual void OnUpdate(float deltatime);
+
+	virtual void OnDraw();
 
 	SceneObjects GetChild(int index);
 
 	int GetChildCount();
 
 	void AddChild(SceneObjects* child);
+
+	void SetTranslation(float x, float y) {
+
+
+
+
+	}
+
+	//void RemoveChild(SceneObjects * child); // no idea what to do here
 
 /*=====================================^^methods^^=================================================*/
 
