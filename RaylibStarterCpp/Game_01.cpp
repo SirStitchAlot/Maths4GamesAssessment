@@ -20,6 +20,9 @@ void Game_01::Init() {
 	tankObject->AddChild(tankSprite);
 }
 
+void Game_01::Shutdown() {
+}
+
 void Game_01::Update() {
 	// detect keyboard input
 	if (IsKeyDown(KEY_A)) // code;

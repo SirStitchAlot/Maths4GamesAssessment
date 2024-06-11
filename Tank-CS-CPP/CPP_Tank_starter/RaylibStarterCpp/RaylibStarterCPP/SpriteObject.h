@@ -5,7 +5,7 @@
 using namespace std;
 
 #include "SceneObject.h"
-
+#include "Helper.h"
 
 class SpriteObject : public SceneObject {
 public:

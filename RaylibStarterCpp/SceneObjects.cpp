@@ -9,9 +9,16 @@ SceneObjects::SceneObjects() {
 };
 
 SceneObjects::~SceneObjects() {
-
-	delete parent;
-	parent = nullptr;
+	if (parent !=NULL)
+	{
+		delete parent;
+		parent = nullptr;
+	}
+	for( SceneObjects so :children )
+	{
+		so.parent = NULL;
+	}
+	
 
 };
 

@@ -6,7 +6,7 @@ using namespace std;
 
 #include "SceneObject.h"
 #include "SpriteObject.h"
-
+#include "Helper.h"
 
 
 class Game_01{

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="MathHeaders">
+      <UniqueIdentifier>{4fb3f10d-fd1b-48bc-bec8-734aedd156ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,13 +24,13 @@
     <ClCompile Include="Game_01.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Helper.cpp">
+    <ClCompile Include="Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SceneObject.cpp">
+    <ClCompile Include="SceneObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SpriteObject.cpp">
+    <ClCompile Include="SpriteObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,14 +38,29 @@
     <ClInclude Include="Game_01.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Helper.h">
+    <ClInclude Include="Program.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SceneObject.h">
+    <ClInclude Include="SceneObjects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SpriteObject.h">
+    <ClInclude Include="SpriteObjects.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHeaders\Vector4.h">
+      <Filter>MathHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHeaders\Vector3.h">
+      <Filter>MathHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHeaders\Matrix4.h">
+      <Filter>MathHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHeaders\Colour.h">
+      <Filter>MathHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MathHeaders\Matrix3.h">
+      <Filter>MathHeaders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

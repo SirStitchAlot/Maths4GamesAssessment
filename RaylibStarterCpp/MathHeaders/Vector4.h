@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 namespace MathClasses
 {
@@ -89,7 +90,7 @@ namespace MathClasses
         }
 
 
-        void Vector4::Normalise() {
+        void Normalise() {
             const float mag = sqrt(x * x + y * y + z * z + w * w);
             //What if mag is zero?
             if (mag > 0.0f)
@@ -112,7 +113,7 @@ namespace MathClasses
 
         }
 
-        float Vector4::Dot(const Vector4& other) const {
+        float Dot(const Vector4& other) const {
             return x * other.x + y * other.y + z * other.z + w * other.w;
         }
 

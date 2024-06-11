@@ -28,21 +28,12 @@
 
 #pragma warning(pop)
 
-// //////////////////////////////////////////
-
-#include <iostream>
-#include <string>
-using namespace std;
-
 #include "Game_01.h"
-
 
 int main(int argc, char* argv[])
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    
-    
     int screenWidth = 800;
     int screenHeight = 450;
 
@@ -60,10 +51,6 @@ int main(int argc, char* argv[])
         // Update
         //----------------------------------------------------------------------------------
         GM.Update();
-         
-         
-         
-         
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -72,23 +59,17 @@ int main(int argc, char* argv[])
 
         ClearBackground(BLACK);
         GM.Draw();
-        
-        DrawText("Raylib C++", 520, 364, 20, WHITE);
 
+        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         EndDrawing();
         //----------------------------------------------------------------------------------
     }
 
     // De-Initialization
-    //--------------------------------------------------------------------------------------   
-    
     GM.Shutdown();
-    
-    
-    
+    //--------------------------------------------------------------------------------------   
     CloseWindow();        // Close window and OpenGL context
-    cout << " -- end of code -- " << endl;
     //--------------------------------------------------------------------------------------
 
     return 0;

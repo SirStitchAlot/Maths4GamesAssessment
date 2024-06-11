@@ -1,8 +1,8 @@
 #pragma once
 
-#include <raymath.h>
-#include <iostream>
-#include "MathHeaders/Matrix3.h"
+#include <raymath.h>;
+#include <iostream>;
+#include "MathHeaders/Matrix3.h";
 #include <vector>;
 using namespace std;
 
