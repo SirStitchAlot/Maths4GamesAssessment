@@ -36,10 +36,10 @@ void SpriteObjects::OnDraw()  {
 
 	float rotation = (float)atan2(GlobalTransform.m2, GlobalTransform.m1);
 
-	DrawTextureEx(texture,
-		Vector2(),
-		rotation * (float)(180.0f / PI),
-		1,
+	Vector2(GlobalTransform.m7,GlobalTransform.m8) uhh;
+
+	DrawTextureV(texture,
+		Vector2 (GlobalTransform.m7,GlobalTransform.m8), //csharp version passes two floats ( but theres no constructor for it apprently )
 		WHITE
 	);
 
