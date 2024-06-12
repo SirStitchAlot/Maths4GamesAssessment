@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "qKeVBmJNeIWrrzdzsjs32rL7U/D41X+sT0MazAVpczRpYfAToD5I24Jll0xRXJUU0JeOmDyYEtJFG8pGWe3+SA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sam\\Desktop\\AIE\\Term 2\\Math for games\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\Matrix_01.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sam\\.nuget\\packages\\raylib-cs\\3.5.0\\raylib-cs.3.5.0.nupkg.sha512",
+    "C:\\Users\\Sam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Sam\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Sam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+﻿  ColourTests.cpp
+  Matrix3Tests.cpp
+  Matrix3TransformTests.cpp
+  Matrix4Tests.cpp
+  Matrix4TransformTests.cpp
+  Vector3Tests.cpp
+  Vector4Tests.cpp
+  Generating Code...
+  MathLibraryTests.vcxproj -> C:\Users\Sam\Desktop\AIE\Term 2\Math for games\MathLibraryTests - STUDENT\x64\Debug\MathLibraryTests.dll

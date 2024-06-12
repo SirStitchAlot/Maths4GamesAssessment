@@ -1,0 +1,13 @@
+﻿  Game_01.cpp
+  main.cpp
+  SceneObject.cpp
+C:\Users\Sam\Desktop\AIE\Term 2\Math for games\Tank-CS-CPP\CPP_Tank_starter\RaylibStarterCpp\RaylibStarterCPP\SceneObject.cpp(27,22): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  SpriteObject.cpp
+  Generating Code...
+raylib.lib(core.obj) : warning LNK4099: PDB '' was not found with 'raylib.lib(core.obj)' or at ''; linking object as if no debug info
+raylib.lib(utils.obj) : warning LNK4099: PDB '' was not found with 'raylib.lib(utils.obj)' or at ''; linking object as if no debug info
+raylib.lib(shapes.obj) : warning LNK4099: PDB '' was not found with 'raylib.lib(shapes.obj)' or at ''; linking object as if no debug info
+raylib.lib(textures.obj) : warning LNK4099: PDB '' was not found with 'raylib.lib(textures.obj)' or at ''; linking object as if no debug info
+raylib.lib(text.obj) : warning LNK4099: PDB '' was not found with 'raylib.lib(text.obj)' or at ''; linking object as if no debug info
+raylib.lib(rglfw.obj) : warning LNK4099: PDB '' was not found with 'raylib.lib(rglfw.obj)' or at ''; linking object as if no debug info
+  RaylibStarterCPP.vcxproj -> C:\Users\Sam\Desktop\AIE\Term 2\Math for games\Tank-CS-CPP\CPP_Tank_starter\RaylibStarterCpp\bin\Debug\RaylibStarterCPP_db.exe
