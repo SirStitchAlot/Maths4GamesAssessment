@@ -13,13 +13,13 @@ class SpriteObjects : public SceneObjects
 /*=====================================^^todo^^=================================================*/
 private:
 	int def_Width = 0;
-	int def_height = 0;
+	int def_Height = 0;
 
 	Texture2D texture = Texture2D();
 	Image image = Image();
 	
-	float Width;
-	float Height;
+	float Width = texture.width;
+	float Height = texture.height;
 
 
 
@@ -42,6 +42,10 @@ public:
 	void Load(string filename);
 
 	void OnDraw() override;
+
+	void Scale_Texture(float w, float h);
+
+	void Scale_Reset();
 
 
 

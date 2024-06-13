@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
         ClearBackground(BLACK);
         GM.Draw();
 
-        DrawText("Naomi is the cutest thing ever", 190, 200, 20, LIGHTGRAY);
+        DrawText("lol", 190, 200, 20, LIGHTGRAY);
 
         EndDrawing();
         //----------------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\katax\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\katax\\.nuget\\packages"
+    ]
+  }
+}

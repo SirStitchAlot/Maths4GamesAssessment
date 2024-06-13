@@ -61,24 +61,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sam\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\s232405\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sam\\Desktop\\AIE\\Term 2\\Math for games\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\Matrix_01.csproj",
+      "projectUniqueName": "C:\\Users\\s232405\\Desktop\\Term2\\Math For Games\\Assessment\\MathLibraryTests - STUDENT\\Maths4GamesAssessment\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\Matrix_01.csproj",
       "projectName": "Matrix_01",
-      "projectPath": "C:\\Users\\Sam\\Desktop\\AIE\\Term 2\\Math for games\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\Matrix_01.csproj",
-      "packagesPath": "C:\\Users\\Sam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sam\\Desktop\\AIE\\Term 2\\Math for games\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\obj\\",
+      "projectPath": "C:\\Users\\s232405\\Desktop\\Term2\\Math For Games\\Assessment\\MathLibraryTests - STUDENT\\Maths4GamesAssessment\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\Matrix_01.csproj",
+      "packagesPath": "C:\\Users\\s232405\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\s232405\\Desktop\\Term2\\Math For Games\\Assessment\\MathLibraryTests - STUDENT\\Maths4GamesAssessment\\Tank-CS-CPP\\CSharp_Tank_01\\CSharp_Tank_01\\RaylibStarterCS\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Sam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\s232405\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -86,7 +81,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -121,24 +115,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.32, 3.1.32]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

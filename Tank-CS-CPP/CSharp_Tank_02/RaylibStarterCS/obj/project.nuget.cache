@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "z92pujXwdwp7piqPEYvo2YkfcX82LSDXP671gTbf8sXx3nwVbDDSkfZjY55Ulw/wn9GdR5u8K3dVeswmCH0h5w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\s232405\\Desktop\\Term2\\Math For Games\\Assessment\\MathLibraryTests - STUDENT\\Maths4GamesAssessment\\Tank-CS-CPP\\CSharp_Tank_02\\RaylibStarterCS\\RaylibStarterCS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\s232405\\.nuget\\packages\\raylib-cs\\3.5.0\\raylib-cs.3.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
